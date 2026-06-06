@@ -22,7 +22,7 @@ CreateThread(function()
 end)
 
 -- TwoPoint AI Control - Client
--- Unified AI relationships, density, dispatch & cleanup
+-- Unified AI relationships, dispatch & cleanup
 -------------------------------------------------------------
 
 -- Configure in config.lua only.
@@ -30,7 +30,7 @@ end)
 -- NOTE: this build disables custom AI handling overrides and the emergency blocker logic for more stable traffic on recent FiveM artifacts.
 
 -- =============================
--- AI RELATIONSHIPS / DENSITY / DISPATCH
+-- AI RELATIONSHIPS / DISPATCH
 -- =============================
 
 -- Relationship setup (run once on start)
@@ -51,25 +51,7 @@ CreateThread(function()
     SetRelationshipBetweenGroups(1, `COP`, `FIREMAN`)
 end)
 
--- Main density loop — must run every frame for *_ThisFrame natives
-CreateThread(function()
-    while true do
-        Wait(0)
-        local v = Config.VehDensity or 0.8
-        local p = Config.PedDensity or 0.8
-        local r = Config.RanVehDensity or 0.8
-        local pa = Config.ParkCarDensity or 0.8
-        local sp = Config.ScenePedDensity or 0.4
-
-        -- per-frame multipliers
-        SetVehicleDensityMultiplierThisFrame(v)
-        SetPedDensityMultiplierThisFrame(p)
-        SetRandomVehicleDensityMultiplierThisFrame(r)
-        SetParkedVehicleDensityMultiplierThisFrame(pa)
-        SetScenarioPedDensityMultiplierThisFrame(sp, sp)
-        SetSomeVehicleDensityMultiplierThisFrame(v)
-    end
-end)
+-- Traffic density control removed so another traffic density resource can manage population multipliers.
 
 -- Dispatch / wanted — does not need to run every frame
 CreateThread(function()
@@ -98,7 +80,7 @@ end)
 
 Citizen.CreateThread(function()
     local vehicleModels = {
-        "ambulance", "firetruk", "polmav", "police", "police2", "police3", "police4", "fbi", "fbi2", "policet", "policeb", "riot", "apc", "barracks", "barracks2", "barracks3", "rhino", "hydra", "lazer", "valkyrie", 
+        "ambulance", "firetruk", "police", "police2", "police3", "police4", "fbi", "fbi2", "policet", "policeb", "riot", "apc", "barracks", "barracks2", "barracks3", "rhino", "hydra", "lazer", "valkyrie", 
         "valkyrie2", "savage", "trailersmall2", "barrage", "chernobog", "khanjali", "menacer", "scarab", "scarab2", "scarab3", "armytanker", "avenger", "avenger2", "tula", "bombushka", "molotok", "volatol", "starling", 
         "mogul", "nokota", "strikeforce", "rogue", "cargoplane", "jet", "buzzard", "besra", "titan", "cargobob", "cargobob2", "cargobob3", "cargobob4", "akula", "hunt", "monster3", "monster4", "monster5", "bruiser",
 		"bruiser2", "bruiser3", "brutus", "brutus2", "brutus3, stretch"

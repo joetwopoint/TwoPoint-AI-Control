@@ -1,4 +1,4 @@
--- TwoPoint Development — Unified AI Control + Police Interaction
+-- TwoPoint Development — AI Dispatch/Cleanup + Police Interaction
 -- Stable traffic build for newer FiveM artifacts.
 
 fx_version 'cerulean'
@@ -6,7 +6,7 @@ lua54 'yes'
 game 'gta5'
 
 name 'TwoPoint_AI_Control'
-description 'Unified AI density/dispatch + emergency cleanup + integrated police interaction for TwoPoint Development.'
+description 'AI dispatch + emergency cleanup + integrated police interaction for TwoPoint Development. Traffic density control removed.'
 author 'TwoPoint Development'
 version '2.1.1'
 
