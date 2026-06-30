@@ -6,7 +6,7 @@ lua54 'yes'
 game 'gta5'
 
 name 'TwoPoint_AI_Control'
-description 'AI dispatch + emergency cleanup + integrated police interaction for TwoPoint Development. Traffic density control removed.'
+description 'AI dispatch + emergency cleanup + integrated police interaction. Traffic density control removed.'
 author 'TwoPoint Development'
 version '2.1.1'
 

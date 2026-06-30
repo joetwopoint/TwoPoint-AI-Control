@@ -83,7 +83,7 @@ Citizen.CreateThread(function()
         "ambulance", "firetruk", "police", "police2", "police3", "police4", "fbi", "fbi2", "policet", "policeb", "riot", "apc", "barracks", "barracks2", "barracks3", "rhino", "hydra", "lazer", "valkyrie", 
         "valkyrie2", "savage", "trailersmall2", "barrage", "chernobog", "khanjali", "menacer", "scarab", "scarab2", "scarab3", "armytanker", "avenger", "avenger2", "tula", "bombushka", "molotok", "volatol", "starling", 
         "mogul", "nokota", "strikeforce", "rogue", "cargoplane", "jet", "buzzard", "besra", "titan", "cargobob", "cargobob2", "cargobob3", "cargobob4", "akula", "hunt", "monster3", "monster4", "monster5", "bruiser",
-		"bruiser2", "bruiser3", "brutus", "brutus2", "brutus3, stretch"
+		"bruiser2", "bruiser3", "brutus", "brutus2", "brutus3"
     }
 
     local pedModels = {
